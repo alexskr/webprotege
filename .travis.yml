@@ -1,7 +1,10 @@
 language: java
 jdk:
   - oraclejdk11
-before_script:
+env:
+  logsdir = /tmp
+before_install:
+  - whoami
   - sudo mkdir /var/log/webprotege
 script: mvn verify
 sudo: false
