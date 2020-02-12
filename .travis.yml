@@ -2,8 +2,10 @@ language: java
 jdk:
   - oraclejdk11
 env:
-  logsdir=/non-existing-directory
+  logs.directory=/non-existing-directory
+  LOGSDIR=/non-existing-directory
 before_install:
+  - echo $logs.directory
   - sudo mkdir /var/log/webprotege1 && sudo chown travis /var/log/webprotege1
 script: mvn verify
 sudo: false
