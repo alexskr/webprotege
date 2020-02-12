@@ -4,8 +4,7 @@ jdk:
 env:
   logsdir=/non-existing-directory
 before_install:
-  - whoami
-  - sudo mkdir /var/log/webprotege && sudo chown travis /var/log/webprotege
+  - sudo mkdir /var/log/webprotege1 && sudo chown travis /var/log/webprotege1
 script: mvn verify
 sudo: false
 services: mongodb
