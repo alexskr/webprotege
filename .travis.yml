@@ -5,7 +5,7 @@ env:
   logsdir = /tmp
 before_install:
   - whoami
-  - sudo mkdir /var/log/webprotege
+  - sudo mkdir /var/log/webprotege && sudo chown travis /var/log/webprotege
 script: mvn verify
 sudo: false
 services: mongodb
