@@ -2,7 +2,7 @@ language: java
 jdk:
   - oraclejdk11
 env:
-  logsdir = /tmp
+  logsdir=/tmp
 before_install:
   - whoami
   - sudo mkdir /var/log/webprotege && sudo chown travis /var/log/webprotege
